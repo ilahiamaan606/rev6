@@ -13,7 +13,7 @@ userrouter.post("/register", async (req, res) => {
     }
     else {
         await UserModel.insertMany([{ email, password }])
-        res.send("Success")
+        res.send("Successfully Registered")
     }
 })
 
@@ -29,12 +29,12 @@ userrouter.post("/login",async(req,res)=>{
                 res.send("Login Success")
             }
             else{
-                res.send("Wrong")
+                res.send("Wrong Password")
             }
         
     }
     else{
-        res.send("doesnt exist")
+        res.send("User doesn't exist")
     }
 })
 
